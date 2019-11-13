@@ -26,11 +26,11 @@ namespace TestSamples
             Driver.Navigate().GoToUrl("https://www.website.com/ap/signin?");
         }
 		
-		[When(@" User enter (*) and (*)")]
-		public void UserEnters(String username, String password)
+	[When(@" User enter (*) and (*)")]
+	public void UserEnters(String username, String password)
         {
-            Console.WriteLine("" + username);
-            Console.WriteLine("" + password);
+            Console.WriteLine("username" + username);
+            Console.WriteLine("password" + password);
         }
 
     }
