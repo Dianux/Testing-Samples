@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
-namespace QuickDemo
+namespace TestSamples
 {
     [Binding]
     public class GivenSteps
