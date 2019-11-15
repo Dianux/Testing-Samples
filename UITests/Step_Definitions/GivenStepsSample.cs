@@ -26,7 +26,7 @@ namespace TestSamples
             Driver.Navigate().GoToUrl("https://www.website.com/ap/signin?");
         }
 		
-	[When(@" User enter (*) and (*)")]
+	[When(@" User enters (*) and (*)")]
 	public void UserEnters(String username, String password)
         {
             Console.WriteLine("username" + username);
