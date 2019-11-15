@@ -8,8 +8,8 @@ Selenium Webdriver
 # Running the tests
 Execute tests in parallel
 
-# Very Important Approach
-Atomic Tests
+# Approach
+Atomic Tests 
 
 # Test these functionalities:
 - Log in 
