@@ -1,15 +1,14 @@
 Feature: LogIn
 In order to access my account
-    As a user 
-    I want to log in
+As a user 
+Successful log in should be achieved
 
 
 Scenario Outline: Successful Login with Valid Credentials
-  Given User is at Home Page 
-  And Navigate to LogIn Page
-  When User enter <username> and <password>
-  And Click on the LogIn button
-  Then Successful LogIn message should display
+Given user is at the LogIn Page
+  When user enters <username> and <password>
+  And clicks the LogIn button
+  Then user should be greeted with correct name
 
   Examples:
   | username                  | password |
@@ -18,11 +17,10 @@ Scenario Outline: Successful Login with Valid Credentials
 
 
 Scenario Outline: Unsuccessful Login with Invalid Username
-  Given User is at Home Page
-  And Navigate to LogIn Page
-  When User enter <username> and <password>
-  And Click on the LogIn button
-  Then I receive an error message 'Invalid username'
+  Given user at the LogIn Page
+  When user enters <username> and <password>
+  And clicks the LogIn button
+  Then an error message regarding username is displayed
 
   Examples:
   | username                | password|
@@ -34,10 +32,10 @@ Scenario Outline: Unsuccessful Login with Invalid Username
 
 
   Scenario Outline: Unsuccessful Login with Invalid Password
-   Given User is at  LogIn Page
-   When User enter <username> and <password>
-   And Click on the LogIn button
-   Then I receive an error message 'Invalid password'
+   Given user is at the LogIn Page
+   When user enters <username> and <password>
+   And clicks the LogIn button
+   Then an error message regarding password is displayed
 
    Examples:
    | username                 | password    |
@@ -49,12 +47,11 @@ Scenario Outline: Unsuccessful Login with Invalid Username
 
   
   Scenario Outline: User stays Logged in with Back button
-   Given User is at LogIn Page
-   When User enter <username> and <password>
-   And select 'Keep me signed in' checkbox
-   And Click on the LogIn button
-   And Click on back arrow button
-   And Click on forward arrow button
-   Then I stay signed in
+   Given user is at the LogIn Page
+   When user enters <username> and <password>
+   And clicks the LogIn button
+   And clicks back arrow button
+   And clicks forward arrow button
+   Then user stays signed in
   
 
